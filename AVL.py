@@ -1,4 +1,4 @@
-# Реалізація AVL-дерева (взято з GeeksforGeeks)
+# Реалізація AVL-дерева
 class Node:
     def __init__(self, value):
         self.value = value
@@ -79,7 +79,6 @@ class AVLTree:
         self.root = self.insert(self.root, value)
 
 ## Завдання 1: Функція для знаходження найбільшого значення
-## Для BST/AVL - найменше значення завжди в правому найбільшому листі
 def find_max(root):
     if not root:
         return None
@@ -97,7 +96,7 @@ def find_min(root):
         current = current.left
     return current.value
 
-## Завдання 3: Функція для обчислення суми всіх значень (рекурсивно)
+## Завдання 3: Функція для обчислення суми всіх значень
 def tree_sum(root):
     if not root:
         return 0
